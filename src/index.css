@@ -1,5 +1,13 @@
+@import 'normalize.css';
+
 body {
   margin: 0;
+  padding: 0;
+
+  width:100%;
+  height: 100vh;
+
+  display: flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +15,59 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* - - - - - - - - - -  */
+/* VARIABLES */
+/* - - - - - - - - - -  */
+
+body {
+  --main-color: forestgreen;
+  --white-color: whitesmoke;
+  --black-color: darkslategrey;
+  background-color: var(--white-color);
+  --default-mg: 0;
+  --default-pd: 0;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* - - - - - - - - - -  */
+/* Custom css */
+/* - - - - - - - - - -  */
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  /*flex-flow: row wrap;*/
+  
+  flex-direction: column;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  /* flex: shrink factor to 0; */
+}
+
+header {
+  display: flex;
+  align-self: flex-start;
+}
+
+nav{
+  display: flex;
+  align-items: strecht;
+}
+
+footer {
+  
+}
+
